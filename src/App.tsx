@@ -59,7 +59,7 @@ function TryQuery() {
 
     return (
         <>
-            <input type='text' id='value' value={ message } autoComplete="off" style={ { width: '80vw', height: '32px' } } onChange={ (e) => setMessage(e.currentTarget.value) } />
+            <input type='text' id='value' value={ message } autoComplete="off" style={ { width: '80vw', height: '32px' } } onChange={ (e) => { console.log('* message changed');setMessage(e.currentTarget.value)} } />
             <div>{ jotaiQuery.status }</div>
             <div>{ jotaiQuery.data ?? '...' }</div>
             <div>{ reactQuery.status }</div>
